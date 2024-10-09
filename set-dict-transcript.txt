@@ -1,0 +1,238 @@
+Python 3.12.6 (main, Sep  8 2024, 17:35:09) [GCC 14.2.1 20240805] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> l = [3,4,5]
+>>> s = {3,4,5}
+>>> l
+[3, 4, 5]
+>>> s
+{3, 4, 5}
+>>> l.append(3)
+>>> l
+[3, 4, 5, 3]
+>>> s.add(3)
+>>> s
+{3, 4, 5}
+>>> s.add(30)
+>>> s
+{3, 4, 5, 30}
+>>> l
+[3, 4, 5, 3]
+>>> t = set(l)
+>>> t
+{3, 4, 5}
+>>> s.
+s.add(
+s.clear(
+s.copy(
+s.difference(
+s.difference_update(
+s.discard(
+s.intersection(
+s.intersection_update(
+s.isdisjoint(
+s.issubset(
+s.issuperset(
+s.pop(
+s.remove(
+s.symmetric_difference(
+s.symmetric_difference_update(
+s.union(
+s.update(
+>>> s.add(2)
+>>> s
+{2, 3, 4, 5, 30}
+>>> s.add("hello")
+>>> s
+{2, 3, 4, 5, 'hello', 30}
+>>> t
+{3, 4, 5}
+>>> tl = list(t)
+>>> tl
+[3, 4, 5]
+>>> set()
+set()
+>>> s = {1,3,4}
+>>> t = {2,3,5}
+>>> s.union(t)
+{1, 2, 3, 4, 5}
+>>> s.intersection(t)
+{3}
+>>> s.difference(t)
+{1, 4}
+>>> s.symmetric_difference(t)
+{1, 2, 4, 5}
+>>> s + t
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'set' and 'set'
+>>> s - t
+{1, 4}
+>>> s & t
+{3}
+>>> s | t
+{1, 2, 3, 4, 5}
+>>> s
+{1, 3, 4}
+>>> for n in s:
+...   print(n)
+... 
+1
+3
+4
+>>> favorite_colors = {}
+>>> favorite_colors
+{}
+>>> type(favorite_colors)
+<class 'dict'>
+>>> favorite_colors["Soren"] = "navy blue"
+>>> favorite_colors
+{'Soren': 'navy blue'}
+>>> favorite_colors["Kenna"] = "green"
+>>> favorite_colors["Jane"] = "blue"
+>>> favorite_colors["Eve"] = "light purple"
+>>> favorite_colors["Zack"] = "red"
+>>> favorite_colors["Marie"] = "green"
+>>> favorite_colors["Maryn"] = "green"
+>>> favorite_colors
+{'Soren': 'navy blue', 'Kenna': 'green', 'Jane': 'blue', 'Eve': 'light purple', 'Zack': 'red', 'Marie': 'green', 'Maryn': 'green'}
+>>> favorite_colors["Maryn"] = "awesome green"
+>>> favorite_colors
+{'Soren': 'navy blue', 'Kenna': 'green', 'Jane': 'blue', 'Eve': 'light purple', 'Zack': 'red', 'Marie': 'green', 'Maryn': 'awesome green'}
+>>> favorite_colors["Zack"]
+'red'
+>>> favorite_colors["Jane"]
+'blue'
+>>> name = "Eve"
+>>> favorite_colors[name]
+'light purple'
+>>> favorite_colors["Ken" + "na"]
+'green'
+>>> favorite_colors["Dr. Pohly"]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'Dr. Pohly'
+>>> "Dr. Pohly" in favorite_colors
+False
+>>> "kenna" in favorite_colors
+False
+>>> "Kenna" in favorite_colors
+True
+>>> "green" in favorite_colors
+False
+>>> favorite_colors.
+favorite_colors.clear(       favorite_colors.pop(
+favorite_colors.copy(        favorite_colors.popitem()
+favorite_colors.fromkeys(    favorite_colors.setdefault(
+favorite_colors.get(         favorite_colors.update(
+favorite_colors.items(       favorite_colors.values(
+favorite_colors.keys(        
+>>> for fc in favorite_colors:
+...   print(fc)
+... 
+Soren
+Kenna
+Jane
+Eve
+Zack
+Marie
+Maryn
+>>> for fc in favorite_colors:
+...   print(fc, favorite_colors[fc])
+... 
+Soren navy blue
+Kenna green
+Jane blue
+Eve light purple
+Zack red
+Marie green
+Maryn awesome green
+>>> for fc in favorite_colors.
+favorite_colors.clear(       favorite_colors.pop(
+favorite_colors.copy(        favorite_colors.popitem()
+favorite_colors.fromkeys(    favorite_colors.setdefault(
+favorite_colors.get(         favorite_colors.update(
+favorite_colors.items(       favorite_colors.values(
+favorite_colors.keys(        
+>>> for fc in favorite_colors.items():
+...   print(fc)
+... 
+('Soren', 'navy blue')
+('Kenna', 'green')
+('Jane', 'blue')
+('Eve', 'light purple')
+('Zack', 'red')
+('Marie', 'green')
+('Maryn', 'awesome green')
+>>> for fc in favorite_colors.values():
+...   print(fc)
+... 
+navy blue
+green
+blue
+light purple
+red
+green
+awesome green
+>>> set(favorite_colors)
+{'Soren', 'Jane', 'Maryn', 'Kenna', 'Eve', 'Marie', 'Zack'}
+>>> set(favorite_colors.values())
+{'light purple', 'awesome green', 'red', 'navy blue', 'green', 'blue'}
+>>> favorite_colors.
+favorite_colors.clear(       favorite_colors.pop(
+favorite_colors.copy(        favorite_colors.popitem()
+favorite_colors.fromkeys(    favorite_colors.setdefault(
+favorite_colors.get(         favorite_colors.update(
+favorite_colors.items(       favorite_colors.values(
+favorite_colors.keys(        
+>>> x = 3
+>>> x
+3
+>>> del x
+>>> x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> l
+[3, 4, 5, 3]
+>>> del l[2]
+>>> l
+[3, 4, 3]
+>>> favorite_colors
+{'Soren': 'navy blue', 'Kenna': 'green', 'Jane': 'blue', 'Eve': 'light purple', 'Zack': 'red', 'Marie': 'green', 'Maryn': 'awesome green'}
+>>> del favorite_colors["Marie"]
+>>> favorite_colors
+{'Soren': 'navy blue', 'Kenna': 'green', 'Jane': 'blue', 'Eve': 'light purple', 'Zack': 'red', 'Maryn': 'awesome green'}
+>>> "Marie" in favorite_colors
+False
+>>> d = {}
+>>> d
+{}
+>>> d = dict()
+>>> d
+{}
+>>> set()
+set()
+>>> {3}
+{3}
+>>> s = {3}
+>>> s.remove(3)
+>>> s
+set()
+>>> len(s)
+0
+>>> len({3,4,5,3})
+3
+>>> len(favorite_colors)
+6
+>>> favorite_colors
+{'Soren': 'navy blue', 'Kenna': 'green', 'Jane': 'blue', 'Eve': 'light purple', 'Zack': 'red', 'Maryn': 'awesome green'}
+>>> favorite_colors["Marie"] = favorite_colors["Kenna"]
+>>> favorite_colors
+{'Soren': 'navy blue', 'Kenna': 'green', 'Jane': 'blue', 'Eve': 'light purple', 'Zack': 'red', 'Maryn': 'awesome green', 'Marie': 'green'}
+>>> favorite_colors.get("Marie")
+'green'
+>>> favorite_colors.get("Dr. Pohly")
+>>> favorite_colors.get("Dr. Pohly", "chartreuse")
+'chartreuse'
+>>> favorite_colors.get("Zack", "chartreuse")
+'red'
